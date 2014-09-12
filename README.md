@@ -2,6 +2,30 @@
 
 提供基本的事件添加，移除和触发功能
 
+##使用
+
+下载项目中 dist 目录里面的文件，并配置好模块相关信息（如：路径，别名），使用如下示例代码即可开始使用。
+
+```
+seajs.use(['events'], function(Events){
+    var obj = new Event();
+    obj.on('test', function(){
+        console.log('test');
+    });
+    
+    obj.trigger('test');
+});
+
+require(['events'], function(Events){
+    var obj = new Event();
+    obj.on('test', function(){
+        console.log('test');
+    });
+    
+    obj.trigger('test');
+});
+```
+
 ##使用说明
 
 ###``new Events();``
